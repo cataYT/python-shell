@@ -44,6 +44,11 @@ def main():
 					print(result[1])
 				else:
 					print("Error:", result[1])
+			case "curl":
+				url = input("Enter the url for the request: ")
+				typeReq = input("Enter the type of request (get/post): ")
+				result = curl(typeReq=typeReq, url=url)
+				print(result.text)
 			case "exit":
 				running = False
 			case "clear":

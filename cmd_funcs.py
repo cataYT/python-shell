@@ -1,5 +1,6 @@
 import os
 import platform
+import requests
 
 current_platform = platform.system()
 
@@ -77,3 +78,10 @@ def clear():
  
 def pwd():
     return os.getcwd()
+
+def curl(typeReq, url):
+    lowerType = typeReq.lower()
+    if (lowerType == "get"):
+        return requests.get(url)
+    elif (lowerType == "post"):
+        return requests.post(url)
