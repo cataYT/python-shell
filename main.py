@@ -55,6 +55,8 @@ def main():
 				clear()
 			case "pwd":
 				print(pwd())
+			case "whoami":
+				print(name)
 			case _:
 				print("Command not found")
 
